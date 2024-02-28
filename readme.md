@@ -7,7 +7,7 @@
    ```bash
    python -m venv venv
    source venv/bin/activate
-   pip install fastapi uvicorn sqlalchemy databases pydantic alembic
+   pip install -r requirements.txt
    ```
 
    Depending on the database you want to use, you will need to install additional packages:
