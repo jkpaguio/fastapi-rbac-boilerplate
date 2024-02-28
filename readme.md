@@ -50,3 +50,7 @@
    This will start the FastAPI application and you can access it at `http://localhost:8000`. The `--reload` flag enables hot reloading, which means the server will automatically update whenever you make changes to the code.
 
 Remember to replace the `DATABASE_URL` in `app/db.py` with your actual database connection string.
+
+
+## **.env**
+   You can add DATABASE_URL & JWT_SECRET 
