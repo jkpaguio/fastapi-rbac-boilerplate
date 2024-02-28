@@ -14,7 +14,7 @@
    # activate venv for linux
    source venv/bin/activate
 
-   # active venv for windows
+   # activate venv for windows
    .\venv\Scripts\activate
    
    pip install -r requirements.txt
