@@ -8,9 +8,15 @@
    git clone https://github.com/phatneglo/fastapi-rbac-boilerplate.git
    cd fastapi-rbac-boilerplate
 
-
+   # Create venv or anaconda if you want
    python -m venv venv
+
+   # activate venv for linux
    source venv/bin/activate
+
+   # active venv for windows
+   .\venv\Scripts\activate
+   
    pip install -r requirements.txt
    ```
 
