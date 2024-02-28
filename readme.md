@@ -5,6 +5,10 @@
    First, you need to create a virtual environment and install the necessary dependencies. This is done in the root directory of your project.
 
    ```bash
+   git clone https://github.com/phatneglo/fastapi-rbac-boilerplate.git
+   cd fastapi-rbac-boilerplate
+
+
    python -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
