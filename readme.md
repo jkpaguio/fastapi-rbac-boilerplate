@@ -8,15 +8,9 @@
    git clone https://github.com/phatneglo/fastapi-rbac-boilerplate.git
    cd fastapi-rbac-boilerplate
 
+
    python -m venv venv
-
-
-   # For linux
    source venv/bin/activate
-
-   # For Windows
-   .\venv\Scripts\activate
-
    pip install -r requirements.txt
    ```
 
@@ -63,27 +57,4 @@ Remember to replace the `DATABASE_URL` in `app/db.py` with your actual database 
 
 
 ## **.env**
-
-   ```env
-   #JWT Secret
-   JWT_SECRET="xxxx"
-
-   # Branca Key
-   BRANCA_KEY="32string"
-
-   # Database Url
-   DATABASE_URL="sqlite:///./test.db"
-
-   # Digital Ocean Spaces Object Storage
-   FS_BUCKET_NAME="bucketname"
-   FS_REGION="sgp1"
-   FS_ENDPOINT="https://sgp1.digitaloceanspaces.com or amazon s3 bucket"
-   FS_ACCESS_KEY_ID="ACCESS_KEY"
-   FS_SECRET_ACCESS_KEY="SECRET_ACCESS_KEY"   
-
-   # Redis
-   REDIS_HOST="localhost"
-   REDIS_PORT=6379
-   REDIS_DB=0
-
-   ```
+   You can add DATABASE_URL & JWT_SECRET 
