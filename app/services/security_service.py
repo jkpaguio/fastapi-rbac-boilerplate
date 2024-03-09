@@ -14,6 +14,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 password_context = CryptContext(schemes=["bcrypt"], deprecated="auto", bcrypt__rounds=10)
 
+
 def verify_password(plain_password, hashed_password):
     return password_context.verify(plain_password, hashed_password)
 

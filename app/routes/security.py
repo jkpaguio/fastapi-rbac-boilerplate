@@ -5,7 +5,7 @@ import jwt
 import os
 
 oauth2_scheme = OAuth2PasswordBearer(
-    tokenUrl="/users/login")
+    tokenUrl="/user/login")
 http_basic = HTTPBasic()
 
 async def get_oauth2_password_bearer(token: str = Depends(oauth2_scheme)):

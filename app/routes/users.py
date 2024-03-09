@@ -27,7 +27,7 @@ async def register_user(user: UserBase):
     return await user_service.create_user(user_info)
 
 
-@router.post("/login")
+@router.post("/login", operation_id="UserLogin")
 async def login_for_access_token(
     username: str = Form(...),
     password: str = Form(...),
