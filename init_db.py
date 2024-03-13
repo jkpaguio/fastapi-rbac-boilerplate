@@ -1,12 +1,13 @@
 # init_db.py
+from dotenv import load_dotenv
+load_dotenv()
+
 from sqlalchemy import create_engine
 from app.db import metadata
-from dotenv import load_dotenv
 
 import os
 
 # Load environment variables
-load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
 
