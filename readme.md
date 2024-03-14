@@ -31,6 +31,10 @@
 
    # for postgres
    pip install asyncpg psycopg2
+
+   # if you want to initialze your database so that it will going to create the table
+   python init_db.py
+
    ```
 
 ## **Project Structure**
