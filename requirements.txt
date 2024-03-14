@@ -31,3 +31,4 @@ uvicorn==0.27.1
 boto3
 pybranca
 dotenv
+redis
