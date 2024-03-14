@@ -17,6 +17,13 @@ oauth2_scheme = OAuth2PasswordBearer(
 
 @router.post("/register", response_model=User, summary="User Registration")
 async def register_user(user: UserBase):
+    if not user.username:
+        raise HTTPException(status_code=422, detail="Username is required")
+    if not user.email:
+        raise HTTPException(status_code=422, detail="Email is required")
+    if not user.password:
+        raise HTTPException(status_code=422, detail="Password is required")    
+    
     default_user_level_id = 1
     user_info = UserCreate(
         user_level_id=default_user_level_id,

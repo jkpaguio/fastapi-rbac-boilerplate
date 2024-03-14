@@ -7,9 +7,9 @@ from typing import Optional
 
 
 class UserBase(BaseModel):
-    username: str = Field(..., description="The username of the user")
-    email: str = Field(..., description="The email of the user")
-    password: str = Field(..., description="The password of the user")
+    username: Optional[str] = Field(None, description="The username of the user")
+    email: Optional[str] = Field(None, description="The email of the user")
+    password: Optional[str] = Field(None, description="The password of the user")
     
 class UserCreate(UserBase):
     user_level_id: int = Field(..., description="The user level ID of the user")    
