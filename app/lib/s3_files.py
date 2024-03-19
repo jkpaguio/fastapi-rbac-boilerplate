@@ -35,6 +35,8 @@ def check_file_exists(file_path, bucket=os.getenv('FS_BUCKET_NAME')):
 def generate_presigned_url(file_key, expiration=3600, bucket=os.getenv('FS_BUCKET_NAME')):
     s3 = get_s3_client()
     try:
+        if not check_file_exists(file_key): # Added Extra Check if file exists
+            return None            
         response = s3.generate_presigned_url('get_object',
                                               Params={'Bucket': bucket,
                                                       'Key': file_key},
@@ -43,6 +45,8 @@ def generate_presigned_url(file_key, expiration=3600, bucket=os.getenv('FS_BUCKE
     except Exception as e:
         print("An error occurred:", e)
         return None    
+    
+    
 @cache_it_sync()
 def get_one_file_in_bucket(prefix, bucket=os.getenv('FS_BUCKET_NAME')):
     s3 = get_s3_client()

@@ -37,6 +37,16 @@ async def get_file_from_folder(folder: str = ""):
     if file is None:
         raise HTTPException(status_code=404, detail="File not found")
     return {"file": file}    
+    
+@router.get("/get_signed_url")
+async def get_file_from_folder(file: str = ""):
+    """
+    Get Signed Url for file
+    """
+    file = s3_files.generate_presigned_url(file)
+    if file is None:
+        raise HTTPException(status_code=404, detail="File not found")
+    return {"file": file}    
 
 
 @router.get("/test_move_file")
